@@ -47,11 +47,11 @@ namespace ConsoleApp2
 
                     try
                     {
-                        sql = "INSERT INTO Notes Values (@Title,@Body,@CreationDate);";
+                        sql = "Insert_Notes";   
 
                         connection.Open();
 
-                        var affectedRows = connection.Execute(sql, new { Title = noteInsert.Title, Body = noteInsert.Body, CreationDate = noteInsert.CreationDate });
+                        var affectedRows = connection.Execute(sql, new { Title = noteInsert.Title, Body = noteInsert.Body, TIME = noteInsert.CreationDate });
                         Console.WriteLine(affectedRows);
 
                     }
